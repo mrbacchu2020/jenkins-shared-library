@@ -6,11 +6,11 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git config.repo
-            }
-        }
+       stage('Checkout') {
+    steps {
+        git branch: 'main', url: config.repo
+    }
+}
 
         stage('Build') {
             steps {
